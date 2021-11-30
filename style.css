@@ -7,6 +7,7 @@ html {
   margin: 0;
   padding: 0;
   background-color: lightblue;
+  text-align: center;
 }
 
 ul {
@@ -22,8 +23,9 @@ img {
 }
 
 .carousel__container {
-  width: 100%;
-  height: 100vh;
+  margin: 0 auto;
+  width: 80%;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,4 +45,36 @@ img {
 
 .usercard img {
   margin-top: 10px;
+}
+
+.carousel__button {
+  position: absolute;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.carousel__button--left {
+  left: 30px;
+}
+
+.carousel__button--right {
+  right: 30px;
+}
+
+.carousel__indicator {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.25);
+  margin: 0 2px;
+}
+
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel__indicator__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
