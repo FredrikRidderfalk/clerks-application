@@ -10,7 +10,16 @@ document
   .getElementById("btn-prev-user")
   .addEventListener("click", moveToPrevCard);
 
+function hideAllCards() {
+  for (let card of cards) {
+    card.classList.remove("usercard--visible");
+    card.classList.add("usercard--hidden");
+  }
+}
+
 function moveToNextCard() {
+  hideAllCards();
+
   if (cardPosition === totalCards - 1) {
     cardPosition = 0;
   } else {
@@ -18,6 +27,7 @@ function moveToNextCard() {
   }
 
   cards[cardPosition].classList.add("usercard--visible");
+  cards[cardPosition].classList.remove("usercard--hidden");
 }
 
 function moveToPrevCard() {
