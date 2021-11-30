@@ -1,1 +1,1 @@
-const mainElement = document.querySelector("#main");
+const main = document.querySelector("#main");
