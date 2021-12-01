@@ -32,18 +32,20 @@ img {
 }
 
 .usercard {
+  display: none;
+}
+
+.usercard.usercard--visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: lightcyan;
   width: 240px;
   height: 50vh;
   margin: 0 10px;
   border-radius: 10px;
   box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
-}
-
-.usercard.usercard--visible {
-  background-color: lightcyan;
+  animation: fadeVisibility 0.75s;
 }
 
 .usercard.usercard--hidden {
@@ -69,19 +71,11 @@ img {
   right: 30px;
 }
 
-.carousel__indicator {
-  padding: 5px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.25);
-  margin: 0 2px;
-}
-
-.carousel__indicator.current-slide {
-  background: rgba(0, 0, 0, 0.75);
-}
-
-.carousel__indicator__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
