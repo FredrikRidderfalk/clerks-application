@@ -31,7 +31,16 @@ function moveToNextCard() {
 }
 
 function moveToPrevCard() {
-  console.log("moving to the prev card!");
+  hideAllCards();
+
+  if (cardPosition === 0) {
+    cardPosition = cards.length - 1;
+  } else {
+    cardPosition--;
+  }
+
+  cards[cardPosition].classList.add("usercard--visible");
+  cards[cardPosition].classList.remove("usercard--hidden");
 }
 
 // for of loop applied on an array of objects
