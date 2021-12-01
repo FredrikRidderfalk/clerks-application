@@ -31,7 +31,8 @@ img {
   align-items: center;
 }
 
-.usercard {
+.usercard,
+.usercard--hidden {
   display: none;
 }
 
@@ -48,8 +49,19 @@ img {
   animation: fadeVisibility 0.75s;
 }
 
-.usercard.usercard--hidden {
-  opacity: 0.1;
+@media (min-width: 900px) {
+  .usercard--visible--desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightcyan;
+    width: 240px;
+    height: 50vh;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 2px 10px 12px rgba(0, 0, 0, 0.5);
+    animation: fadeVisibility 0.75s;
+  }
 }
 
 .usercard img {
